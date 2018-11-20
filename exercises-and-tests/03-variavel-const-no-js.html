@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variável const no js</title>
+</head>
+<body>
+    <script>
+        const secretNumber = 20;
+        
+        const marcus = {
+            name: 'Marcus',
+            age: 31
+        };
+        Object.freeze(marcus);
+        marcus.age = 50;
+        console.log(marcus);
+    </script>
+</body>
+</html>

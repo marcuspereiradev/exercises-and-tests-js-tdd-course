@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uses Template Literal</title>
+</head>
+<body>
+    <script>
+        const baixadaFluminense = {
+            live: "Nova Iguaçu",
+            love: "Rio de Janeiro"
+        };
+        
+        const text = 'Eu moro em ' + baixadaFluminense.live + ' e sou apaixonado por ' + baixadaFluminense.love + '!';
+        console.log(text);
+        
+        //Uma maneira mais prática de escrever string com propriedades de um objeto
+        //usando a crase e não as aspas.
+        const newText = `Eu moro em ${baixadaFluminense.live} e sou apaixonado por ${baixadaFluminense.love}`;
+        console.log(newText);
+
+        ///////////////////////////
+
+        const fruits = 'banana' + '\n' + 'orange' + '\n' + 'apple';
+        console.log(fruits);
+        
+        //Dessa maneira o ES6 entende que é pra pular linha.
+        const newFruits = 
+        `banana 
+        orange 
+        apple`;
+        console.log(newFruits);
+    </script>
+</body>
+</html>
