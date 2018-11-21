@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Symbols</title>
+</head>
+<body>
+    <script>
+        let foo = Symbol('name');
+        let bar = Symbol('name');
+        // console.log(foo == bar);
+        // 
+        
+        let obj = {
+            [Symbol('name')]: 'Marcus',
+            [Symbol('age')]: 31,
+            city: 'Nova Iguaçu'
+        };
+        
+        const symbols = Object.getOwnPropertySymbols(obj);
+        const data = symbols.map(sym => obj[sym]);
+        console.log(data);
+    </script>
+</body>
+</html>
