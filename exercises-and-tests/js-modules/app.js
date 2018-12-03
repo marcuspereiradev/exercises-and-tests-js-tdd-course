@@ -25,8 +25,3 @@ console.log(multiplicacao(7, 2));
 console.log(dividir(4, 2));
 
 console.log(PI);
-
-// function sum(x, y) {
-//     return `O resulta é: ${x + y + x + y}`;
-// }
-// console.log(sum(2, 5));
