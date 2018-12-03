@@ -4,16 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "watch": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Marcus Pereira <marcus.work@hotmail.com> (https://github.com/marcuspereiragithub)",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "ramda": "^0.26.1",
+    "gitignore": "^0.6.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2"

@@ -1,6 +1,4 @@
-const webpack = require('webpack');
-// const nodeENV = process.env.NODE_ENV || 'production';
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     mode: 'production',
@@ -9,23 +7,21 @@ module.exports = {
         filename: './app.js'
     },
     output: {
-        filename: './build.js'
+        filename: 'build.js',
+        path: path.resolve(__dirname, 'dist')
     },
-    module: {
-        rules: [
-          {
-            test: /\.m?js$/,
-            exclude: /(node_modules|bower_components)/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['@babel/preset-env']
-              }
-            }
-          }
-        ]
-      },
-    optimization: {
-        minimizer: [new UglifyJsPlugin()]
-      }
+    // module: {
+    //     rules: [
+    //       {
+    //         test: /\.m?js$/,
+    //         exclude: /(node_modules|bower_components)/,
+    //         use: {
+    //           loader: 'babel-loader',
+    //           options: {
+    //             presets: ['@babel/preset-env']
+    //           }
+    //         }
+    //       }
+    //     ]
+    //   },
 }
